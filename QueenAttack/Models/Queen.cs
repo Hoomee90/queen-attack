@@ -15,7 +15,14 @@ namespace QueenAttack.Models
 		
 		public bool CanAttack(int x, int y)
 		{
-			return false;
+			if (x == XCoord)
+			{
+				return true;
+			} 
+			else
+			{
+				return false;
+			}
 		}
 	}
 }

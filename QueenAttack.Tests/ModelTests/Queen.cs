@@ -50,13 +50,23 @@ namespace QueenAttack.Tests
 		}
 		
 		[TestMethod]
-		public void CanAttack_DetermineNoAttack_Bool()
+		public void CanAttack_DetermineWhenNoAttack_Bool()
 		{
 			Queen newQueen = new(10, 3);
 			int XPiece = 5;
 			int YPiece = 7;
 			bool result = newQueen.CanAttack(XPiece, YPiece);
 			Assert.IsFalse(result);
+		}
+		
+		[TestMethod]
+		public void CanAttack_DetermineWhenXAttack_Bool()
+		{
+			Queen newQueen = new(10, 3);
+			int XPiece = 10;
+			int YPiece = 7;
+			bool result = newQueen.CanAttack(XPiece, YPiece);
+			Assert.IsTrue(result);
 		}
 	}
 }
