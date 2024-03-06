@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace QueenAttack.Models
 {
 	public class Queen
@@ -9,6 +11,11 @@ namespace QueenAttack.Models
 		{
 			XCoord = x;
 			YCoord = y;
+		}
+		
+		public bool CanAttack(int x, int y)
+		{
+			return false;
 		}
 	}
 }

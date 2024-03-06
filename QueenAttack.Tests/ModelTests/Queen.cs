@@ -32,7 +32,7 @@ namespace QueenAttack.Tests
 		}
 		
 		[TestMethod]
-		public void GetYCoord_ReturnsCoordX_Int()
+		public void GetYCoord_ReturnsCoordY_Int()
 		{
 			int Coordinate = 3;
 			Queen newQueen = new(0, Coordinate);
@@ -41,12 +41,22 @@ namespace QueenAttack.Tests
 		}
 		
 		[TestMethod]
-		public void SetYCoord_SetsValueOfCoordX_Void()
+		public void SetYCoord_SetsValueOfCoordY_Void()
 		{
 			Queen newQueen = new(0, 3);
 			int newCoordinate = 7;
 			newQueen.YCoord = newCoordinate;
 			Assert.AreEqual(newCoordinate, newQueen.YCoord);
+		}
+		
+		[TestMethod]
+		public void CanAttack_DetermineNoAttack_Bool()
+		{
+			Queen newQueen = new(10, 3);
+			int XPiece = 5;
+			int YPiece = 7;
+			bool result = newQueen.CanAttack(XPiece, YPiece);
+			Assert.IsFalse(result);
 		}
 	}
 }
