@@ -19,7 +19,7 @@ namespace QueenAttack.Models
 			{
 				return true;
 			}
-			if (y == x - (XCoord - YCoord))
+			if ((y == x - (XCoord - YCoord)) || (y == -x + (XCoord + YCoord)))
 			{
 				return true;
 			}
