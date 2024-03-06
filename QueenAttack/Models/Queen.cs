@@ -1,4 +1,4 @@
-using System.Security.Cryptography.X509Certificates;
+using System;
 
 namespace QueenAttack.Models
 {
@@ -19,7 +19,7 @@ namespace QueenAttack.Models
 			{
 				return true;
 			}
-			if ((y == x - (XCoord - YCoord)) || (y == -x + (XCoord + YCoord)))
+			if (Math.Abs((y - YCoord) / (x - XCoord)) == 1)
 			{
 				return true;
 			}
