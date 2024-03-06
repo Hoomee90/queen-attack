@@ -68,5 +68,15 @@ namespace QueenAttack.Tests
 			bool result = newQueen.CanAttack(XPiece, YPiece);
 			Assert.IsTrue(result);
 		}
+		
+		[TestMethod]
+		public void CanAttack_DetermineWhenYAttack_Bool()
+		{
+			Queen newQueen = new(10, 3);
+			int XPiece = 5;
+			int YPiece = 3;
+			bool result = newQueen.CanAttack(XPiece, YPiece);
+			Assert.IsTrue(result);
+		}
 	}
 }
