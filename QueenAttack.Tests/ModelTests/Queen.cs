@@ -78,5 +78,25 @@ namespace QueenAttack.Tests
 			bool result = newQueen.CanAttack(XPiece, YPiece);
 			Assert.IsTrue(result);
 		}
+		
+		[TestMethod]
+		public void CanAttack_DetermineWhenDiagonalQuad1Attack_Bool()
+		{
+			Queen newQueen = new(10, 3);
+			int XPiece = 13;
+			int YPiece = 6;
+			bool result = newQueen.CanAttack(XPiece, YPiece);
+			Assert.IsTrue(result);
+		}
+		
+		[TestMethod]
+		public void CanAttack_DetermineWhenDiagonalQuad3Attack_Bool()
+		{
+			Queen newQueen = new(10, 3);
+			int XPiece = 7;
+			int YPiece = 0;
+			bool result = newQueen.CanAttack(XPiece, YPiece);
+			Assert.IsTrue(result);
+		}
 	}
 }

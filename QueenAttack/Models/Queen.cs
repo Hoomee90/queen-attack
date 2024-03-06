@@ -18,7 +18,11 @@ namespace QueenAttack.Models
 			if (x == XCoord || y == YCoord)
 			{
 				return true;
-			} 
+			}
+			if (y == x - (XCoord - YCoord))
+			{
+				return true;
+			}
 			else
 			{
 				return false;
