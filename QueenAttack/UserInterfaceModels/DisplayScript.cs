@@ -5,6 +5,23 @@ namespace QueenAttack.UserInterfaceModels
 {
 	class Display
 	{
+		internal static void TypeLine(string text, bool blockEnd = false)
+		{
+			foreach (char letter in text)
+			{
+				Console.Write(letter);
+				Thread.Sleep(20);
+			}
+			if (blockEnd) 
+			{
+				_ = Console.ReadLine();
+			} 
+			else 
+			{
+				Thread.Sleep(250);
+			}
+			Console.WriteLine();
+		}
 		internal static void Opening(int x, int y)
 		{
 			TypeLine($"The freshfaced nameless chess piece has received their first assignment. They are to scout and secure the area of ({x}, {y}) and hold it until further instruction.");
@@ -21,10 +38,10 @@ namespace QueenAttack.UserInterfaceModels
 			
 			TypeLine("Despite what they have been told to expect in this theater of war, the nameless piece finds their journey almost disconcertingly uneventful.");
 			TypeLine("They have very little intel; they are headed to territory they themselves will be responsible for exploring.");
-			TypeLine("But surely they should have encountered something by now. An enemy fighter. A squad of friendlies. Even the wild noncombatants they've heard whispers of.");
+			TypeLine("But surely they should have encountered something by now. An enemy fighter.");
+			TypeLine("A squad of friendlies. Even the wild noncombatants they've heard whispers of.");
 			TypeLine("There is nothing. They travel through monotonous plains, tedium broken only by the land's transition from black to white and back again.", true);
 			
-			TypeLine("...", true);
 			TypeLine("...", true);
 			TypeLine("...", true);
 			
@@ -32,21 +49,46 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine($"({x}, {y}) looks just the same as every square they have seen thus far, but it is not the nameless piece's place to question orders.");
 			TypeLine("They get to work. Securing the area, deploying accommodations.");
 			TypeLine("Preparing themselves for whatever may come next.", true);
+			Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		}
 		
-		internal static void TypeLine(string text, bool blockEnd = false)
+		internal static void TextNoAttack(int x, int y)
 		{
-			foreach (char letter in text)
-			{
-				Console.Write(letter);
-				Thread.Sleep(20);
-			}
-			if (blockEnd) {
-				_ = Console.ReadLine();
-			} else {
-				Thread.Sleep(250);
-			}
-			Console.WriteLine();
+			TypeLine("Time passes, and the nameless chess piece waits. They eat rations and explore the parameter.");
+			TypeLine("They do their best to feel accomplished.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine($"Time passes, and the nameless chess piece waits. They have gained an exhaustive understanding of nearly the entirety of ({x}, {y}).");
+			TypeLine("Not a single stone has been left unturned.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine("Time passes, and the nameless chess piece waits. They score marks in the ground to make imaginary infantry lines.");
+			TypeLine("Move pebbles around like troops, act out famous battles.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine("Time passes, and the nameless chess piece waits. They think fondly of their fellow cadets, who must be out on assignment now too.");
+			TypeLine("What are they doing? Fighting, surely. Their own mission is different, special. How lucky they are.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine("Time passes, and the nameless chess piece waits. They are sure they saw something on the horizon, but it immediately disappeared.");
+			TypeLine("They must be seeing things.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine("Time passes, and the nameless chess piece waits. They've lost track of the date. There was no calender in their supplies.");
+			TypeLine("What day is it? What month?");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
+			TypeLine("Time passes, and the nameless chess piece waits. This is important work. This is making their nation proud. This is...");
+			TypeLine("This is their last day of rations.");
+			TypeLine("They are ready for new orders.");
+			TypeLine("Whenever they will receive them.", true);
+			TypeLine("...", true);
 		}
 	}
 }
