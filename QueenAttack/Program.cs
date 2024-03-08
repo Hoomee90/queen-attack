@@ -8,11 +8,12 @@ namespace QueenAttack
 	{
 		static void Main()
 		{
+			
 			Queen queen = new(0, 0);
 			DisplayQueenAttack(queen);
 			// Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 			// Console.WriteLine("Welcome to QueenAttack");
-			// Console.WriteLine("We'll calculate if the Queen is able to attack a piece on the chess board based on their positions");
+			// Console.WriteLine("We'll calculate if a chess Queen is able to attack another pice based on their positions");
 			// Console.WriteLine("First we need to crown the Queen");
 			// MakeQueen();
 		}
@@ -45,7 +46,7 @@ namespace QueenAttack
 		static void DisplayQueenAttack(Queen queen)
 		{
 			Console.WriteLine("-----------------------------------------");
-			Console.WriteLine("Now place a piece and we'll see if the queen can attack it");
+			Console.WriteLine("Now place a piece and we'll see if the Queen can attack it");
 			Console.WriteLine("Please enter a number for the nameless piece's X coordinate");
 			int PieceX = int.Parse(Console.ReadLine());
 			Console.WriteLine("And one for the Y coordinate");
