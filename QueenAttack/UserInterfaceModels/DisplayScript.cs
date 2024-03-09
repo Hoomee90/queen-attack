@@ -3,12 +3,31 @@ using System.Threading;
 
 namespace QueenAttack.UserInterfaceModels
 {
+	
 	class Display
 	{
-		internal static void TypeLine(string text, bool blockEnd = false)
+		internal static void ToggleColor(ConsoleColor Bgcolor, ConsoleColor Fgcolor)
+		{
+			if (Console.BackgroundColor == ConsoleColor.Black && Console.ForegroundColor == ConsoleColor.White)
+			{
+				Console.BackgroundColor = Bgcolor;
+				Console.ForegroundColor = Fgcolor;
+			}
+			else
+			{
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.ForegroundColor = ConsoleColor.White;
+			}
+		}
+		
+		internal static void TypeLine(string text, bool blockEnd = false, ConsoleColor Bgcolor = ConsoleColor.Black, ConsoleColor Fgcolor = ConsoleColor.White)
 		{
 			foreach (char letter in text)
 			{
+				if (letter == '"' && !(Bgcolor == ConsoleColor.Black && Fgcolor == ConsoleColor.White)) 
+				{
+					ToggleColor(Bgcolor, Fgcolor);
+				}
 				Console.Write(letter);
 				Thread.Sleep(20);
 			}
@@ -25,7 +44,7 @@ namespace QueenAttack.UserInterfaceModels
 		internal static void Opening(int x, int y)
 		{
 			TypeLine($"The freshfaced nameless chess piece has received their first assignment. They are to scout and secure the area of ({x}, {y}) and hold it until further instruction.");
-			TypeLine("\"This is a very special mission,\" their superiors tell them \"You must go alone.\"");
+			TypeLine("\"This is a very special mission,\" their superiors tell them \"You must go alone.\"", false);
 			TypeLine("It is a long and grueling trek. These are wartorn lands, hostile down to their very dirt.");
 			TypeLine("Those who walk them are no longer taught to forage; the only surviving plants are just as dangerous as anything else.", true);
 			
@@ -52,7 +71,7 @@ namespace QueenAttack.UserInterfaceModels
 			Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		}
 		
-		internal static void TextNoAttack(int x, int y)
+		internal static void NoAttack(int x, int y)
 		{
 			TypeLine("Time passes, and the nameless chess piece waits. They eat rations and explore the parameter.");
 			TypeLine("They do their best to feel accomplished.");

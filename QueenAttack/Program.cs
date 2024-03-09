@@ -53,7 +53,7 @@ namespace QueenAttack
 			int PieceY = int.Parse(Console.ReadLine());
 			bool result = queen.CanAttack(PieceX, PieceY);
 			Console.WriteLine("-----------------------------------------");
-			Display.TextNoAttack(PieceX, PieceY);
+			Display.Opening(PieceX, PieceY);
 		}
 	}
 }
