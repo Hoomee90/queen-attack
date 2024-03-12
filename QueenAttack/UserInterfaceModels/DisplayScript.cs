@@ -48,7 +48,7 @@ namespace QueenAttack.UserInterfaceModels
 			
 			TypeLine("Not that the nameless piece would know any different. They are a child of battle, born and raised to fight.");
 			TypeLine("Their head contains only tactics, their heart the desire to make their nation proud.");
-			TypeLine("They have been waiting all their life for this: enter stage left the nameless piece, script written in blood and not a single spoken line.", true);
+			TypeLine("All their life, they have waited for this: enter stage left the nameless piece, script written in blood and not a single spoken line.", true);
 			
 			TypeLine("They are not afraid.");
 			TypeLine("They cannot be afraid.", true);
@@ -133,7 +133,26 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine("They sleep deeper, patrol less often, get sloppy on their weapon upkeep.");
 			TypeLine("They relax.");
 			TypeLine("But the play's third act is about to begin, and their roll has no room for improv.");
-			TypeLine("Their is only one way this story ends.", true);
+			TypeLine("There is only one way this story ends.", true);
+			
+			TypeLine("It happens not in the dead of night, but rather broad daylight.");
+			TypeLine("The nameless chess piece has just finished eating their breakfast rations when they see it.");
+			TypeLine("A lone figure. No more than a black speck on the horizon.");
+			TypeLine("Long distance optic instruments are quickly unloaded.");
+			TypeLine("But by the time the nameless chess piece looks again, they are gone.", true);
+			
+			TypeLine("However, right before they can dismiss it as their imagination, the figure reappears closer.");
+			TypeLine("Much, much closer.");
+			TypeLine("She is tall, a body more wiry than lithe by way of poised muscles. Draped in a raggedy cloak, her face is perfectly blank.");
+			TypeLine("There is a blade in her hand, blacker than midnight, and a crown on her head.");
+			TypeLine("At that, it is only the nameless piece's lifetime of training that shields them from mindless panic.");
+			TypeLine("It is tarnished and worn, but unmistakable. The crown of a Queen.", true);
+			
+			TypeLine("The nameless piece reaches for their weapon, but in the space of a breath the Queen moves.");
+			TypeLine("The fight is over before it began.");
+			TypeLine("Black flashes, red splatters, and the nameless piece finds themselves fighting a losing battle to breathe through perforated lungs.");
+			TypeLine("Standing loosely over them, the Queen's impassive face acquires a bitter sneer.");
+			TypeLine("\"Again? What're they even getting out of this?\" Her voice was scratchy, upper class accent crushed into something grating.", true, ConsoleColor.Black);
 		}
 	}
 }
