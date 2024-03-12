@@ -55,8 +55,8 @@ namespace QueenAttack.UserInterfaceModels
 			
 			TypeLine("Despite what they have been told to expect in this theater of war, the nameless piece finds their journey almost disconcertingly uneventful.");
 			TypeLine("They have very little intel; they are headed to territory they themselves will be responsible for exploring.");
-			TypeLine("But surely they should have encountered something by now. An enemy fighter.");
-			TypeLine("A squad of friendlies. Even the wild noncombatants they've heard whispers of.");
+			TypeLine("But surely they should have encountered something by now. An enemy fighter. A squad of friendlies.");
+			TypeLine("Even the wild noncombatants they've heard whispers of.");
 			TypeLine("There is nothing. They travel through monotonous plains, tedium broken only by the land's transition from black to white and back again.", true);
 			
 			TypeLine("...", true);
@@ -121,6 +121,19 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine("The data is invaluable, is it not?");
 			TypeLine($"The Queen was unable to attack the location of ({x}, {y})", true);
 			TypeLine("...", true);
+		}
+		
+		internal static void YesAttack(int x, int y)
+		{
+			TypeLine("After a couple days, the nameless chess piece has settled into their temporary dwelling.");
+			TypeLine("It's... nice. No rigid structure, no midnight emergency drills, no cruel instructors.");
+			TypeLine("Just an open horizon and the pride of successfully serving their nation.", true);
+			
+			TypeLine("In their wonderment at these positive emotions, the nameless chess piece begins slacking.");
+			TypeLine("They sleep deeper, patrol less often, get sloppy on their weapon upkeep.");
+			TypeLine("They relax.");
+			TypeLine("But the play's third act is about to begin, and their roll has no room for improv.");
+			TypeLine("Their is only one way this story ends.", true);
 		}
 	}
 }

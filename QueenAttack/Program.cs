@@ -53,7 +53,7 @@ namespace QueenAttack
 			Display.Opening(PieceX, PieceY);
 			if (result)
 			{
-
+				Display.YesAttack(PieceX, PieceY);
 			}
 			else
 			{
