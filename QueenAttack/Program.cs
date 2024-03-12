@@ -11,7 +11,7 @@ namespace QueenAttack
 			Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
 			Console.WriteLine("Welcome to QueenAttack");
 			Console.WriteLine("We'll calculate if a chess Queen is able to attack another piece based on their positions");
-			Console.WriteLine("First we need to crown the Queen");
+			Console.WriteLine("First we need to create the Queen");
 			MakeQueen();
 		}
 		static void MakeQueen()
@@ -58,6 +58,26 @@ namespace QueenAttack
 			else
 			{
 				Display.NoAttack(PieceX, PieceY);
+			}
+			Finish();
+		}
+		
+		static void Finish()
+		{
+			Console.WriteLine("-----------------------------------------");
+			Console.WriteLine("Has your curiosity been satisfied?");
+			Console.WriteLine("Or would you like to run the program again?");
+			Console.WriteLine("It's up to you.");
+			Console.WriteLine("Enter 'y' to calculate again. or anything else to exit.");
+			string userResponse = Console.ReadLine().ToLower();
+			if (userResponse == "y")
+			{
+				Console.WriteLine("-----------------------------------------");
+				MakeQueen();
+			}
+			else
+			{
+				Console.WriteLine("We hope you have had an enjoyable time with QueenAttack");
 			}
 		}
 	}

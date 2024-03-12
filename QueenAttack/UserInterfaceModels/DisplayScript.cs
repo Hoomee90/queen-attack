@@ -120,7 +120,7 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine("It is over. The orders were followed to perfection.");
 			TypeLine("The data is invaluable, is it not?");
 			TypeLine($"The Queen was unable to attack the location of ({x}, {y})", true);
-			Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			TypeLine("...", true);
 		}
 	}
 }
