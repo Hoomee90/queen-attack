@@ -8,14 +8,11 @@ namespace QueenAttack
 	{
 		static void Main()
 		{
-			
-			Queen queen = new(0, 0);
-			DisplayQueenAttack(queen);
-			// Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-			// Console.WriteLine("Welcome to QueenAttack");
-			// Console.WriteLine("We'll calculate if a chess Queen is able to attack another pice based on their positions");
-			// Console.WriteLine("First we need to crown the Queen");
-			// MakeQueen();
+			Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+			Console.WriteLine("Welcome to QueenAttack");
+			Console.WriteLine("We'll calculate if a chess Queen is able to attack another piece based on their positions");
+			Console.WriteLine("First we need to crown the Queen");
+			MakeQueen();
 		}
 		static void MakeQueen()
 		{
@@ -32,7 +29,7 @@ namespace QueenAttack
 		{
 			Console.WriteLine($"The Queen's coordinates are ({queen.XCoord}, {queen.YCoord})");
 			Console.WriteLine("Do you want to continue, or change them?");
-			Console.WriteLine("'y' to continue, anything else to reenter coordinates");
+			Console.WriteLine("'y' to continue, or anything else to reenter coordinates");
 			string userResponse = Console.ReadLine().ToLower();
 			if (userResponse == "y")
 			{
@@ -54,6 +51,14 @@ namespace QueenAttack
 			bool result = queen.CanAttack(PieceX, PieceY);
 			Console.WriteLine("-----------------------------------------");
 			Display.Opening(PieceX, PieceY);
+			if (result)
+			{
+
+			}
+			else
+			{
+				Display.NoAttack(PieceX, PieceY);
+			}
 		}
 	}
 }
