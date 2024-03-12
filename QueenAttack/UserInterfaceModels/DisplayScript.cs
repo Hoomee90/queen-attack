@@ -1,4 +1,5 @@
 using System;
+using System.Net.Http.Headers;
 using System.Threading;
 
 namespace QueenAttack.UserInterfaceModels
@@ -6,27 +7,24 @@ namespace QueenAttack.UserInterfaceModels
 	
 	class Display
 	{
-		internal static void ToggleColor(ConsoleColor Bgcolor, ConsoleColor Fgcolor)
-		{
-			if (Console.BackgroundColor == ConsoleColor.Black && Console.ForegroundColor == ConsoleColor.White)
-			{
-				Console.BackgroundColor = Bgcolor;
-				Console.ForegroundColor = Fgcolor;
-			}
-			else
-			{
-				Console.BackgroundColor = ConsoleColor.Black;
-				Console.ForegroundColor = ConsoleColor.White;
-			}
-		}
 		
-		internal static void TypeLine(string text, bool blockEnd = false, ConsoleColor Bgcolor = ConsoleColor.Black, ConsoleColor Fgcolor = ConsoleColor.White)
+		internal static void TypeLine(string text, bool blockEnd = false, ConsoleColor textColor = ConsoleColor.Gray)
 		{
 			foreach (char letter in text)
 			{
-				if (letter == '"' && !(Bgcolor == ConsoleColor.Black && Fgcolor == ConsoleColor.White)) 
-				{
-					ToggleColor(Bgcolor, Fgcolor);
+				if (letter == '"' && !(textColor == ConsoleColor.Gray))
+				{	
+					if (!(Console.ForegroundColor == ConsoleColor.Gray))
+					{
+						Console.Write(letter);
+						Thread.Sleep(20);
+						Console.ResetColor();
+						continue;
+					}
+					else
+					{
+						Console.ForegroundColor = textColor;
+					}
 				}
 				Console.Write(letter);
 				Thread.Sleep(20);
@@ -44,7 +42,7 @@ namespace QueenAttack.UserInterfaceModels
 		internal static void Opening(int x, int y)
 		{
 			TypeLine($"The freshfaced nameless chess piece has received their first assignment. They are to scout and secure the area of ({x}, {y}) and hold it until further instruction.");
-			TypeLine("\"This is a very special mission,\" their superiors tell them \"You must go alone.\"", false);
+			TypeLine("sdg \"This is a very special mission,\" their superiors tell them \"You must go alone\"", false, ConsoleColor.DarkRed);
 			TypeLine("It is a long and grueling trek. These are wartorn lands, hostile down to their very dirt.");
 			TypeLine("Those who walk them are no longer taught to forage; the only surviving plants are just as dangerous as anything else.", true);
 			
@@ -67,7 +65,7 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine("Until they make it.");
 			TypeLine($"({x}, {y}) looks just the same as every square they have seen thus far, but it is not the nameless piece's place to question orders.");
 			TypeLine("They get to work. Securing the area, deploying accommodations.");
-			TypeLine("Preparing themselves for whatever may come next.", true);
+			TypeLine("Preparing themself for whatever may come next.", true);
 			Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		}
 		
@@ -93,7 +91,7 @@ namespace QueenAttack.UserInterfaceModels
 			TypeLine("They are ready for new orders.");
 			TypeLine("Whenever they will receive them.", true);
 			TypeLine("...", true);
-			TypeLine("Time passes, and the nameless chess piece waits. They are sure they saw something on the horizon, but it immediately disappeared.");
+			TypeLine("Time passes, and the nameless chess piece waits. They were sure they spotted something on the horizon, but it disappeared.");
 			TypeLine("They must be seeing things.");
 			TypeLine("They are ready for new orders.");
 			TypeLine("Whenever they will receive them.", true);
