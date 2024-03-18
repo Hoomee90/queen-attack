@@ -1,8 +1,8 @@
-# Title
+# QueenAttack
 
 #### By **Samantha Callie**
 
-#### Subtitle
+#### Calculate a chess queen's attacking abilities
 
 ## Technologies Used
 
@@ -11,20 +11,19 @@
 
 ## Description
 
-Description
+The command line program allows users to enter the coordinates of a queen and another chess piece. The program will then tell them if the queen is capable of capturing that piece. There is nothing deeper going on. Nothing.
 
 ## Setup/Installation Requirements
 
 1. Press the green <> Code button and select Download ZIP
 2. Unzip file
-3. Clone this repo.
-4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "ProjectName".
+4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "QueenAttack".
 5. In the command line, run the command "dotnet run" to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
 6. Optionally, you can run "dotnet build" to compile this console app without running it.
 
 ## Known Bugs
 
-* There are no known bugs at this time
+* Entering numbers too large or too small for Int32 variables will cause the program to crash
 
 ## License
 
